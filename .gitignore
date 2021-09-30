@@ -1,0 +1,10 @@
+.DS_Store
+
+/.idea
+/data/log/*/*.log
+
+/data/apps/mysql/data
+!/data/apps/mysql/data/.gitkeep
+
+/data/apps/redis/data
+!/data/apps/redis/data/.gitkeep
