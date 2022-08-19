@@ -12,7 +12,7 @@ nginx配置目录：`nginx/conf/conf.d`
 浏览器访问 `http://localhost/test.php`
 
 # php
-安装了哪些系统命令和php扩展？基于官方镜像`php:7.4-fpm`，详见 `php-fpm\dockerfile.md`
+安装了哪些系统命令和php扩展？基于官方镜像`php:8.1.9-fpm`，详见 `php-fpm\dockerfile.md`
 
 您可以根据自己的需要，新增或移除部分命令或扩展，然后build一个新容器镜像
 ```

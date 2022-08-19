@@ -19,7 +19,7 @@ services:
       - web-network
 
   docker-php-fpm:
-    image: registry.cn-hangzhou.aliyuncs.com/cuiw/php:v1-swoole
+    image: registry.cn-hangzhou.aliyuncs.com/cuiw/php:v2-mongodb
     tty: true
     volumes:
       - ./php-fpm/etc/php/php.ini:/usr/local/etc/php/php.ini
