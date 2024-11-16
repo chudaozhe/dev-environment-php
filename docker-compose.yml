@@ -9,6 +9,7 @@ services:
     ports:
       - 80:80
       - 443:443
+    restart: always
     tty: true
     volumes:
       - ./data/www:/var/www
@@ -19,8 +20,11 @@ services:
       - web-network
 
   docker-php-fpm:
-    image: registry.cn-hangzhou.aliyuncs.com/cuiw/php:v2-mongodb
+    image: registry.cn-hangzhou.aliyuncs.com/cuiw/php:8.2.17-fpm-v1.0
+    restart: always
     tty: true
+    extra_hosts: #允许容器内通过localhost访问宿主机(在容器内的hosts添加一条，将host.docker.internal映射到宿主机ip)
+      - host.docker.internal:host-gateway
     volumes:
       - ./php-fpm/etc/php/php.ini:/usr/local/etc/php/php.ini
       - ./php-fpm/etc/php-fpm.d/docker.conf:/usr/local/etc/php-fpm.d/docker.conf
